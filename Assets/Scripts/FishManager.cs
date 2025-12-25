@@ -7,7 +7,6 @@ public class FishManager : MonoBehaviour
     private Rigidbody2D rb;
     [SerializeField] private float speed = 0.5f;
     [SerializeField] private float exp;
-    
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
