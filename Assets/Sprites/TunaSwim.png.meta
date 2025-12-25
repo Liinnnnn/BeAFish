@@ -1,31 +1,31 @@
 fileFormatVersion: 2
-guid: f113412e052aba44b8014571ff98466f
+guid: f6ec8278881c5824fa173292f2bbac4a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5427762365466935209
-    second: TunaSwim_0
+      213: -5404623427041470783
+    second: TunaSwim 1_0
   - first:
-      213: -170558932107488348
-    second: TunaSwim_1
+      213: 1991271451634273139
+    second: TunaSwim 1_1
   - first:
-      213: 4628004022643379844
-    second: TunaSwim_2
+      213: 2221850059865481866
+    second: TunaSwim 1_2
   - first:
-      213: 5199623637124067234
-    second: TunaSwim_3
+      213: -4025259426676947555
+    second: TunaSwim 1_3
   - first:
-      213: 8175377959072728430
-    second: TunaSwim_4
+      213: 7748587281278745316
+    second: TunaSwim 1_4
   - first:
-      213: 6557678130005475200
-    second: TunaSwim_5
+      213: 599947399825088907
+    second: TunaSwim 1_5
   - first:
-      213: -4668639106921937253
-    second: TunaSwim_6
+      213: -8828348790123403494
+    second: TunaSwim 1_6
   - first:
-      213: -8675626338820769498
-    second: TunaSwim_7
+      213: 9109142422663524421
+    second: TunaSwim 1_7
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -160,7 +160,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: TunaSwim_0
+      name: TunaSwim 1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -175,14 +175,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9aff3e62d19435b40800000000000000
-      internalID: 5427762365466935209
+      spriteID: 1c65076c0abeef4b0800000000000000
+      internalID: -5404623427041470783
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TunaSwim_1
+      name: TunaSwim 1_1
       rect:
         serializedVersion: 2
         x: 65
@@ -197,14 +197,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4a3967e0e8d02adf0800000000000000
-      internalID: -170558932107488348
+      spriteID: 37b8906c5da62ab10800000000000000
+      internalID: 1991271451634273139
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TunaSwim_2
+      name: TunaSwim 1_2
       rect:
         serializedVersion: 2
         x: 131
@@ -219,14 +219,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 48eccbc6329f93040800000000000000
-      internalID: 4628004022643379844
+      spriteID: a82667a8bd895de10800000000000000
+      internalID: 2221850059865481866
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TunaSwim_3
+      name: TunaSwim 1_3
       rect:
         serializedVersion: 2
         x: 199
@@ -241,14 +241,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2af21803626c82840800000000000000
-      internalID: 5199623637124067234
+      spriteID: d95c020d0e76328c0800000000000000
+      internalID: -4025259426676947555
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TunaSwim_4
+      name: TunaSwim 1_4
       rect:
         serializedVersion: 2
         x: 265
@@ -263,14 +263,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e65861350f6c47170800000000000000
-      internalID: 8175377959072728430
+      spriteID: 4eababb1413888b60800000000000000
+      internalID: 7748587281278745316
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TunaSwim_5
+      name: TunaSwim 1_5
       rect:
         serializedVersion: 2
         x: 327
@@ -285,14 +285,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 08ff252e38d810b50800000000000000
-      internalID: 6557678130005475200
+      spriteID: b816e724bf0735800800000000000000
+      internalID: 599947399825088907
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TunaSwim_6
+      name: TunaSwim 1_6
       rect:
         serializedVersion: 2
         x: 387
@@ -307,14 +307,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b96cb6fb779a53fb0800000000000000
-      internalID: -4668639106921937253
+      spriteID: a17e17bcc876b7580800000000000000
+      internalID: -8828348790123403494
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TunaSwim_7
+      name: TunaSwim 1_7
       rect:
         serializedVersion: 2
         x: 449
@@ -329,8 +329,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 629b09e6fcbf99780800000000000000
-      internalID: -8675626338820769498
+      spriteID: 540fc4765cc2a6e70800000000000000
+      internalID: 9109142422663524421
       vertices: []
       indices: 
       edges: []
@@ -349,14 +349,14 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      TunaSwim_0: 5427762365466935209
-      TunaSwim_1: -170558932107488348
-      TunaSwim_2: 4628004022643379844
-      TunaSwim_3: 5199623637124067234
-      TunaSwim_4: 8175377959072728430
-      TunaSwim_5: 6557678130005475200
-      TunaSwim_6: -4668639106921937253
-      TunaSwim_7: -8675626338820769498
+      TunaSwim 1_0: -5404623427041470783
+      TunaSwim 1_1: 1991271451634273139
+      TunaSwim 1_2: 2221850059865481866
+      TunaSwim 1_3: -4025259426676947555
+      TunaSwim 1_4: 7748587281278745316
+      TunaSwim 1_5: 599947399825088907
+      TunaSwim 1_6: -8828348790123403494
+      TunaSwim 1_7: 9109142422663524421
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

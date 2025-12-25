@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         speed = PlayerStats.Speed;
+        
     }
 
     // Update is called once per frame
@@ -57,6 +58,5 @@ public class PlayerMovement : MonoBehaviour
         {
             animator.SetBool("swim",!isSwimming);
         }
-        
     }
 }

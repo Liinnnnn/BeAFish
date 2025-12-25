@@ -5,12 +5,14 @@ public class FishManager : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private Rigidbody2D rb;
-    [SerializeField] private float speed = 0.5f;
-    [SerializeField] private float exp;
+    [SerializeField] private float speed;
+    [SerializeField] public int exp;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         speed = Random.Range(speed,speed*2f);
+        int randomScale = Random.Range(1,3);
+        transform.localScale = new Vector3(randomScale,randomScale);
         if(transform.position.x > 0)
         {
             Flip(false);
@@ -39,4 +41,5 @@ public class FishManager : MonoBehaviour
         }
         transform.localScale = scale;
     }
+    
 }
