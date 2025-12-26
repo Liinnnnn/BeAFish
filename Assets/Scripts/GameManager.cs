@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     public GameObject fish;
     public GameObject levelUpUI;
     public Slider expBar;
+    public PlayerLevelUp player;
     void Start()
     {
         PlayerLevelUp.onLevelUp += playerLevelUp;
@@ -17,7 +18,6 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
     }
 
     public void playerLevelUp()
@@ -27,6 +27,6 @@ public class GameManager : MonoBehaviour
     
     private void updateXPbar()
     {
-        expBar.value = PlayerStats.currentXP;
+        expBar.value = Mathf.Clamp01((float) player.currentXP / player.levelCap);
     }
 }

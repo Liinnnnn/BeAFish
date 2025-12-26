@@ -6,31 +6,37 @@ public class PlayerLevelUp : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public static event Action onLevelUp;
     public static event Action onXpChange;
+    public int currentXP;
+    public int currentLevel;
+    public int levelCap;
     // Update is called once per frame
-    void FixedUpdate()
+    void Start()
     {
-        levelUp();
+    }
+    void Update()
+    {
+        
     }
 
     private void levelUp()
     {
-        if(PlayerStats.currentXP >= PlayerStats.levelCap)
-        {
-            PlayerStats.level +=1;
-            PlayerStats.levelCap += PlayerStats.levelCap;
-            onLevelUp?.Invoke(); 
-        }
+       
+        currentLevel +=1;
+        levelCap += levelCap;
+        onLevelUp?.Invoke(); 
     }
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Mob"))
         {
             int xp =  collision.GetComponent<FishManager>().exp;
-            PlayerStats.currentXP += xp;
-            if(PlayerStats.currentXP >= PlayerStats.levelCap)
+            currentXP += xp;
+            if(currentXP >= levelCap)
             {
-                PlayerStats.currentXP = PlayerStats.currentXP - PlayerStats.levelCap;
+                currentXP = currentXP - levelCap;
+                levelUp();
             }
+            Destroy(collision.gameObject);
             onXpChange?.Invoke();
         }
     }
