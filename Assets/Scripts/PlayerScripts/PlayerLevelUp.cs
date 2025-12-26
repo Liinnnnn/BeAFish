@@ -9,6 +9,8 @@ public class PlayerLevelUp : MonoBehaviour
     public int currentXP;
     public int currentLevel;
     public int levelCap;
+    public AudioSource audioSource;
+    [SerializeField] private AudioClip audioClip;
     // Update is called once per frame
     private void levelUp()
     {
@@ -27,6 +29,7 @@ public class PlayerLevelUp : MonoBehaviour
                 currentXP = currentXP - levelCap;
                 levelUp();
             }
+            audioSource.PlayOneShot(audioClip);
             Destroy(collision.gameObject);
             onXpChange?.Invoke();
         }
