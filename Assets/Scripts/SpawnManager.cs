@@ -47,6 +47,6 @@ public class SpawnManager : MonoBehaviour
             yield return new WaitForSecondsRealtime(2f);
             spawnFish();
         }
-        
     }
+
 }

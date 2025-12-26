@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
 {
-    public static int Size = 1;
-    public static int Speed = 2;
+    public static float Size = 1;
+    public static float Speed = 2;
+    public static int XpMultiplier = 1;
 }

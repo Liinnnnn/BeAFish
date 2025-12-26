@@ -1,4 +1,3 @@
-using Unity.Collections;
 using UnityEngine;
 
 public class FishManager : MonoBehaviour
@@ -11,7 +10,7 @@ public class FishManager : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         speed = Random.Range(speed,speed*2f);
-        int randomScale = Random.Range(1,3);
+        float randomScale = Random.Range(1,3) ;
         transform.localScale = new Vector3(randomScale,randomScale);
         if(transform.position.x > 0)
         {

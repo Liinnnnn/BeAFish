@@ -14,15 +14,10 @@ public class GameManager : MonoBehaviour
         PlayerLevelUp.onLevelUp += playerLevelUp;
         PlayerLevelUp.onXpChange += updateXPbar;
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-    }
-
     public void playerLevelUp()
     {
         levelUpUI.SetActive(true);
+        Time.timeScale = 0;
     }
     
     private void updateXPbar()

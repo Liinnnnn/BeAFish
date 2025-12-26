@@ -3,6 +3,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float speed ;
+    [SerializeField] public float size ;
     public DynamicJoystick joystick;
     private Rigidbody2D rb;
     private bool isSwimming = true;
@@ -14,7 +15,9 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         speed = PlayerStats.Speed;
-        
+        size = PlayerStats.Size;
+        transform.localScale = new Vector3(size,size);
+        LevelUpUI.onUpgrade +=updateStats;
     }
 
     // Update is called once per frame
@@ -58,5 +61,11 @@ public class PlayerMovement : MonoBehaviour
         {
             animator.SetBool("swim",!isSwimming);
         }
+    }
+    private void updateStats()
+    {
+        size = PlayerStats.Size;
+        speed = PlayerStats.Speed;
+        transform.localScale = new Vector3(size,size);
     }
 }

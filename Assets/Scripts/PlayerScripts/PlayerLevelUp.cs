@@ -10,26 +10,17 @@ public class PlayerLevelUp : MonoBehaviour
     public int currentLevel;
     public int levelCap;
     // Update is called once per frame
-    void Start()
-    {
-    }
-    void Update()
-    {
-        
-    }
-
     private void levelUp()
     {
-       
         currentLevel +=1;
         levelCap += levelCap;
         onLevelUp?.Invoke(); 
     }
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Mob"))
+        if (collision.CompareTag("Mob") && Math.Abs(collision.transform.localScale.x) <= Math.Abs (FindAnyObjectByType<PlayerMovement>().size))
         {
-            int xp =  collision.GetComponent<FishManager>().exp;
+            int xp =  collision.GetComponent<FishManager>().exp * PlayerStats.XpMultiplier;
             currentXP += xp;
             if(currentXP >= levelCap)
             {
