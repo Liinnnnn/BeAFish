@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,6 +9,7 @@ public class GameManager : MonoBehaviour
     [Header("Player")]
     public GameObject fish;
     public GameObject levelUpUI;
+    public GameObject lostUI;
     public Slider expBar;
     public PlayerLevelUp player;
     public GameObject LVupNotice;
@@ -15,6 +17,7 @@ public class GameManager : MonoBehaviour
     {
         PlayerLevelUp.onLevelUp += playerLevelUp;
         PlayerLevelUp.onXpChange += updateXPbar;
+        FishManager.onPlayerDying += losingUI;
     }
     public void playerLevelUp()
     {
@@ -33,5 +36,17 @@ public class GameManager : MonoBehaviour
         LVupNotice.SetActive(true);
         yield return new WaitForSecondsRealtime(3f);
         LVupNotice.SetActive(false);
+    }
+    private void losingUI()
+    {
+        lostUI.SetActive(true);
+        Time.timeScale = 0;
+    }
+    public void restart()
+    {
+        Time.timeScale = 1;
+        fish.tag = "Player";
+        fish.SetActive(true);
+        lostUI.SetActive(false);
     }
 }

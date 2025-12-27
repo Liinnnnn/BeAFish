@@ -14,6 +14,10 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        if (joystick == null)
+        {
+            joystick = FindAnyObjectByType<DynamicJoystick>();
+        }
         speed = PlayerStats.Speed;
         size = PlayerStats.Size;
         transform.localScale = new Vector3(size,size);
@@ -41,26 +45,26 @@ public class PlayerMovement : MonoBehaviour
     }
     private void MovePlayer()
     {
-        
-        float x = Input.GetAxis("Horizontal");
-        float y = Input.GetAxis("Vertical");
-        
+        float x;
+        float y;
+       
         if (joystick != null)
         {
             x = joystick.Horizontal;
             y = joystick.Vertical;
+            Vector2 movement = new Vector2(x, y).normalized;
+            rb.linearVelocity = movement * speed;
+            if(x != 0 || y != 0)
+            {
+                animator.SetBool("swim",isSwimming);
+            }else
+            {
+                animator.SetBool("swim",!isSwimming);
+            }
         }
 
-        Vector2 movement = new Vector2(x, y).normalized;
-        rb.linearVelocity = movement * speed;
 
-        if(x != 0 || y != 0)
-        {
-            animator.SetBool("swim",isSwimming);
-        }else
-        {
-            animator.SetBool("swim",!isSwimming);
-        }
+       
     }
     private void updateStats()
     {
