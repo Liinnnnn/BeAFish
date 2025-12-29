@@ -20,4 +20,11 @@ public class LevelUpUI : MonoBehaviour
         UI.SetActive(false);
         onUpgrade?.Invoke();
     }
+    public void upgradeExp()
+    {
+        Time.timeScale = 1;
+        PlayerStats.XpMultiplier += 1;
+        UI.SetActive(false);
+        onUpgrade?.Invoke();
+    }
 }

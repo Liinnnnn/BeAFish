@@ -12,12 +12,14 @@ public class SpawnManager : MonoBehaviour
         StartCoroutine(DelayTime());
     }
 
-    // Update is called once per frame
-    void Update()
+    void OnDisable()
     {
-        
+        StopAllCoroutines();
     }
-
+    void OnEnable()
+    {
+        StartCoroutine(DelayTime());
+    }
     private void spawnFish()
     {
         float numberOfFish = Random.Range(1,Fishes.Length);

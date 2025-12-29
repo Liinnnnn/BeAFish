@@ -62,14 +62,12 @@ public class PlayerMovement : MonoBehaviour
                 animator.SetBool("swim",!isSwimming);
             }
         }
-
-
-       
     }
     private void updateStats()
     {
         size = PlayerStats.Size;
         speed = PlayerStats.Speed;
+        
         transform.localScale = new Vector3(size,size);
     }
 }

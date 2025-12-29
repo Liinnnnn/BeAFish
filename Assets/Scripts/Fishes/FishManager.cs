@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public class FishManager : MonoBehaviour
@@ -7,12 +6,11 @@ public class FishManager : MonoBehaviour
     private Rigidbody2D rb;
     [SerializeField] private float speed;
     [SerializeField] public int exp;
-    public static event Action onPlayerDying;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        speed = UnityEngine.Random.Range(speed,speed*2f);
-        float randomScale = UnityEngine.Random.Range(1,3) ;
+        speed = Random.Range(speed,speed*2f);
+        float randomScale = Random.Range(1,3) ;
         transform.localScale = new Vector3(randomScale,randomScale);
         if(transform.position.x > 0)
         {
@@ -22,7 +20,7 @@ public class FishManager : MonoBehaviour
             speed = -speed;
         }
     }
-
+    
     // Update is called once per frame
     void Update()
     {
@@ -42,13 +40,5 @@ public class FishManager : MonoBehaviour
         }
         transform.localScale = scale;
     }
-    void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player") && Math.Abs(gameObject.transform.localScale.x) > Math.Abs (FindAnyObjectByType<PlayerMovement>().size) )
-        {
-            collision.gameObject.SetActive(false);
-            Destroy(gameObject);
-            onPlayerDying?.Invoke();
-        }
-    }
+  
 }

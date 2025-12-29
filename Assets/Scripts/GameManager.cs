@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using Unity.Mathematics;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,11 +15,12 @@ public class GameManager : MonoBehaviour
     public Slider expBar;
     public PlayerLevelUp player;
     public GameObject LVupNotice;
+    public GameObject fishManager;
     void Start()
     {
         PlayerLevelUp.onLevelUp += playerLevelUp;
         PlayerLevelUp.onXpChange += updateXPbar;
-        FishManager.onPlayerDying += losingUI;
+        Bite.onPlayerDying += losingUI;
     }
     public void playerLevelUp()
     {
@@ -41,12 +44,13 @@ public class GameManager : MonoBehaviour
     {
         lostUI.SetActive(true);
         Time.timeScale = 0;
+        fishManager.SetActive(false);
     }
     public void restart()
     {
         Time.timeScale = 1;
-        fish.tag = "Player";
         fish.SetActive(true);
         lostUI.SetActive(false);
+        fishManager.SetActive(true);
     }
 }
